@@ -1,0 +1,79 @@
+:root {
+  --light-color: #f8cfaa;
+  --dark-color: #630505;
+}
+
+.Name {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--light-color);
+  text-shadow: 2px 2px 0px rgba(0,0,0);
+  background-color: var(--dark-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+nav a {
+  color: var(--light-color);
+}
+
+nav p {
+  display: inline-block;
+  width: 17%;
+  min-width: 85px;
+  text-align: center;
+  border: var(--light-color) medium solid;
+  background-color: var(--dark-color);
+  font-weight: 200;
+  margin-left: 3px;
+}
+
+main {
+  background-color: var(--light-color);
+  font-family: arial, sans-serif;
+	margin: 0 auto;
+	width: 800px;
+}
+
+footer {
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+h2 {
+  text-align: center;
+}
+
+
+ul.data {
+  list-style-image: url("/photos/gameboy.jpg");
+}
+
+footer p {
+  font-size: 0.75em;
+  font-style: italic;
+  text-align: center;
+
+}
+
+footer p span {
+  font-weight: bold;
+}
+
+
+
+body {
+  background-image: url("/photos/Board.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    width: 100%;
+  }
+}

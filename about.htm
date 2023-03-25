@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+    
+        
+            <head>
+        <a href="http://retro-repairs.space/" title="home"><img src="/photos/logo.png" title="home" alt="Logo" width="200"></a>
+		<h1 Class="Name"> Retro-Repairs</h1>
+        <meta charset="utf-8">
+        <title> About</title>
+        <link  rel="stylesheet" href="webstyles.css" type="text/css">
+				
+        
+    <style>
+
+       .People img {
+        width: 100px;
+       }
+
+		.staff-member img {
+        float: right;
+        margin-left: 20px;
+        max-width: 200px;
+        border-radius: 50%;
+      }
+		   .staff-member h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+		
+		section img {
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  float: left; /* or float: right; */
+  margin: 0 20px 20px 0; /* or margin: 0 0 20px 20px; */
+}
+    </style>
+        
+        <nav>
+            <p><a href="http://retro-repairs.space">Home</a></p>
+            <p><a href="http://retro-repairs.space/about.htm">About us</a></p>
+            <p><a href="http://retro-repairs.space/data.html">Data</a></p>
+            <p><a href="#">Repair</a></p>
+            <p><a href="#">Gallery</a></p>
+        </nav>
+    </head>
+<html lang="en">
+
+<body>
+    <main>
+    
+   
+<section>
+<img src="\photos\gba.png" alt="gba" width="200" height="200" ><h2>Our History: </h2>
+<hr>
+<p>The Game Boy was a handheld video game console developed and manufactured by Nintendo, which was released in 1989. It became one of the most 
+    popular and recognizable gaming devices of the 90s and was a major factor in the popularity of handheld gaming devices. The Game Boy was a 
+    monochrome system with a green-tinted screen, and it was powered by a 4.19 MHz processor and 8 KB of RAM. It used cartridges to store games, 
+    and was compatible with a wide range of titles, from classic franchises like "Super Mario Bros." and "The Legend of Zelda" to more niche offerings 
+    like "Tetris" and "Kirby's Dream Land."
+</p>
+<p>The Game Boy was followed by several versions, including the Game Boy Pocket, the Game Boy Color, and the Game Boy Advance, each of which improved 
+    upon the original design and added new features. Despite the release of more advanced systems, the original Game Boy remained popular and remained 
+    in production until 2003, 14 years after its initial release. The legacy of the Game Boy can be seen in the continued popularity of handheld gaming
+     devices, and its impact on the gaming industry is still felt today.
+</p>
+</section>
+
+<section class="People">
+    
+    <h2>Our People:</h2>
+
+<button onClick="emp1()">Matt Parente</button>
+<button onClick="emp2()">Satoru Iwata</button>
+
+	<div class="staff-member">
+<h3 id="hidden"></h3>
+<img id="hiddenimg">
+<p id="hiddenp"></p>
+    </div>
+<!--<h3><img src="\photos\Matt.jpg" alt="matt">Matt Parente: Creator/Tech</p></h3>
+    <p>Oversees general sales and procurment as well as day to day activities at the store and manages the website for customers to navigate. In addition repairs and upgrades devices.</p>
+-->   
+    <!--<h3><img src="\photos\shuntaro.png" alt="satoru" >Satoru Iwata: Intern/Tech</h3>
+    <p>General serviec tech, he is a very promising intern, almost like he has done this before, or at least been around some folks that know a thing or two.</p>
+    -->
+</section>
+
+<script>
+window.addEventListener('load', emp1);
+
+function emp1(){
+document.getElementById("hiddenimg").setAttribute("src","/photos/Matt.jpg")
+var heading = document.getElementById("hidden");
+heading.innerText = "Matt Parente: Creator/Tech";
+var paragraph = document.getElementById("hiddenp");
+paragraph.innerText="Oversees general sales and procurment as well as day to day activities at the store and manages the website for customers to navigate. In addition repairs and upgrades devices.";
+
+}
+function emp2(){
+document.getElementById("hiddenimg").setAttribute("src","/photos/shuntaro.png")
+var heading = document.getElementById("hidden");
+heading.innerText = "Satoru Iwata: Intern/Tech";
+var paragraph = document.getElementById("hiddenp");
+paragraph.innerText="General serviec tech, he is a very promising intern, almost like he has done this before, or at least been around some folks that know a thing or two."
+}  
+</script>
+		<footer>
+  <p>
+    Site copyright &copy; <span>2023</span> by <span>Matt Parente</span>.
+  </p>
+</footer>
+
+	</main>  
+</body>
+</html>
+</html>

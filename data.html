@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+	
+<head>
+<meta charset="utf-8">
+<title>data</title>
+	<style>
+	   table {
+        font-family: Arial, Verdana, sans-serif;
+        border-collapse: collapse;
+        border: 2px solid #333;
+        width: 100%;
+      }
+      
+      th, td {
+        padding: 5px 10px;
+      }
+      
+      th {
+        background-color: #333;
+        color: #fff;
+        min-width: 10%;
+      }
+      
+      td {
+        background-color: #eee;
+        color: #333;
+        border: 1px solid #333;
+      }
+	 
+		main {
+			width: 800px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+</head>
+	
+	<link  rel="stylesheet" href="webstyles.css" type="text/css">
+	
+	
+<body>
+	<img src="/photos/logo.png" alt="Logo" length="200px" width="200px" Title="logo">
+	<h1 class="Name"> Retro-Repairs</h1>
+	        <nav>
+            <p><a href="http://retro-repairs.space/">Home</a></p>
+            <p><a href="http://retro-repairs.space/about.htm">About us</a></p>
+            <p><a href="http://retro-repairs.space/data.html">Data</a></p>
+            <p><a href="#">Repair</a></p>
+            <p><a href="#">Gallery</a></p>
+        </nav>
+	<main>
+<h1>Some information about Gameboys</h1>
+	
+	
+	<ul class="data" >
+  <li>
+    <h1>Game Boy (1989)</h1>
+    <img src="/photos/GB.png" alt="Game Boy (1989)" width="200px">
+  </li>
+  <li>
+    <h1>Game Boy Color (1998)</h1>
+    <img src="/photos/GBC.jpg" alt="Game Boy Color (1998)" width="200px">
+  </li>
+  <li>
+    <h1>Game Boy Advance (2001)</h1>
+    <img src="/photos/GBAD.jpg" alt="Game Boy Advance (2001)" width="200px">
+  </li>
+  <li>
+    <h1>Game Boy Advance SP (2003)</h1>
+    <img src="/photos/GBASP.jpg" alt="Game Boy Advance SP (2003)" width="200px">
+  </li>
+</ul>
+	
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Colors</th>
+    <th>Games</th>
+    <th>Manf.</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>Gameboy</td>
+    <td id="gb-color">1</td>
+    <td id="gb-games">1046</td>
+    <td id="gb-manf">4-21-89</td>
+    <td id="gb-price">$89.99</td>
+  </tr>
+  <tr>
+    <td>Game Boy Color</td>
+    <td id="gbc-color">5</td>
+    <td id="gbc-games">576</td>
+    <td id="gbc-manf">10-21-98</td>
+    <td id="gbc-price">$79.95</td>
+  </tr>
+  <tr>
+    <td>Gameboy Advance</td>
+    <td id="gba-color">6</td>
+    <td id="gba-games">1538</td>
+    <td id="gba-manf">03-01-01</td>
+    <td id="gba-price">$99.99</td>
+  </tr>
+  <tr>
+    <td>Gameboy Advance SP</td>
+    <td id="gbasp-color">3</td>
+    <td id="gbasp-games">1538</td>
+    <td id="gbasp-manf">02-14-03</td>
+    <td id="gbasp-price">$99.99</td>
+  </tr>
+</table>
+	
+	<script>
+  const gameFilterInput = document.getElementById('game-filter');
+  const rows = document.getElementsByTagName('tr');
+  
+  gameFilterInput.addEventListener('input', () => {
+    const gameFilterValue = gameFilterInput.value;
+    for (let i = 1; i < rows.length; i++) {
+      const row = rows[i];
+      const gamesCell = row.querySelector('td:nth-child(3)');
+      if (gamesCell.textContent < gameFilterValue) {
+        row.classList.add('hidden');
+      } else {
+        row.classList.remove('hidden');
+      }
+    }
+  });
+</script>
+
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
+	<label for="find-games">Input how many games you want to play:</label>
+<input type="number" id="find-games">
+
+<button id="find-button">Find!</button>
+<div id="result"></div>
+
+<script>
+  const findButton = document.getElementById('find-button');
+  findButton.addEventListener('click', function() {
+    const findGames = document.getElementById('find-games').value;
+    const gbGames = document.getElementById('gb-games').textContent;
+    const gbcGames = document.getElementById('gbc-games').textContent;
+    const gbaGames = document.getElementById('gba-games').textContent;
+    const gbaspGames = document.getElementById('gbasp-games').textContent;
+    const result = document.getElementById('result');
+    result.textContent = '';
+    if (parseInt(gbGames) > findGames) {
+      result.innerHTML += '<p>Gameboy has more than ' + findGames + ' games.</p>';
+    }
+    if (parseInt(gbcGames) > findGames) {
+      result.innerHTML += '<p>Game Boy Color has more than ' + findGames + ' games.</p>';
+    }
+    if (parseInt(gbaGames) > findGames) {
+      result.innerHTML += '<p>Gameboy Advance has more than ' + findGames + ' games.</p>';
+    }
+    if (parseInt(gbaspGames) > findGames) {
+      result.innerHTML += '<p>Gameboy Advance SP has more than ' + findGames + ' games.</p>';
+    } else {
+      result.innerHTML += '<p>The max amount of Game Boy games made was 1538, Gameboy SP, or Advance is the best choice for ' + findGames + ' games.</p>';
+    }
+  });
+</script>
+
+	</main>	
+	
+	<footer>
+  <div class="footer-container">
+    <p>Site copyright &copy; <span>2023</span> by <span>Matt Parente</span>.</p>
+  </div>
+</footer>
+	
+
+	</body>
+</html>
+

@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>join</title>
+	<style>
+		main {
+			border: 2px solid #630505;
+		}
+		
+		
+		fieldset {
+			border: none;
+			margin-bottom: 20px;
+		}
+		
+		legend {
+			font-weight: bold;
+			font-size: 1.2em;
+			margin-bottom: 10px;
+		}
+		
+		input, textarea {
+			display: block;
+			margin-bottom: 5px;
+			border: 3px solid #630505;
+			padding: 5px;
+			width: 75%;
+			vertical-align: top;
+		}
+		
+		button {
+			margin-top: 10px;
+			padding: 5px 10px;
+			background-color: #630505;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		button[type="reset"] {
+			background-color: #ccc;
+			color: #333;
+			margin-left: 10px;
+		}
+		
+			fieldset label {
+			display: block;
+			width: 200px;
+		}
+		
+		fieldset input {
+			display: inline-block;
+			width: auto;
+		}
+.comments-input {
+		width: 200%;
+	height: 100px;
+	vertical-align: top;
+	}
+	</style>
+
+</head>
+<link  rel="stylesheet" href="webstyles.css" type="text/css">
+	
+
+	
+<body>
+	<img src="/photos/logo.png" alt="Logo" length="200px" width="200px" Title="logo">
+	<h1 class="Name"> Retro-Repairs</h1>
+	        <nav class="grid-nav">
+  <p><a href="http://retro-repairs.space/">Home</a></p>
+  <p><a href="http://retro-repairs.space/about.htm">About us</a></p>
+  <p><a href="http://retro-repairs.space/data.html">Data</a></p>
+  <p><a href="http://retro-repairs.space/join.html">Join</a></p>
+  <p><a href="http://retro-repairs.space/shapes.html">Shapes</a></p>
+</nav>
+	
+<main>
+<form>
+<h2>Please Join Our Repair List</h2>
+	<fieldset>
+				<legend>Contact information</legend>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+				<br>
+				<label for="address">Address:</label>
+				<input type="text" id="address" name="address" required>
+				<br>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+				<br>
+				<label for="phone">Phone:</label>
+				<input type="tel" id="phone" name="phone" required>
+			</fieldset>
+			<fieldset>
+				<legend>Check what needs replacing:</legend>
+				<input type="checkbox" name="repairs" value="Screen Replacment"> Screen Replacment</label><br>
+				<br>
+				<label><input type="checkbox" name="repairs" value="Speaker Replacment"> Speaker Replacment</label>
+				<br>
+				<label><input type="checkbox" name="repairs" value="Button Replacment"> Button Replacment</label>
+				<br>
+				<label><input type="checkbox" name="repairs" value="New Shell"> New Shell</label>
+				<br>
+				<label><input type="checkbox" name="repairs" value="Upgraded Screen"> LED Screen </label>
+				<br>
+				<label><input type="checkbox" name="repairs" value="Custom Order"> Custom Order</label>
+				<br>
+				
+			</fieldset>
+<fieldset>
+		<legend>What Device is being Submitted?</legend>
+		<label for="Gameboy">
+			<input type="radio" name="device" value="Gameboy" id="Gameboy">
+			GameBoy
+		</label><br>
+		<label>
+			<input type="radio" name="device" value="GameBoy Color">
+			GameBoy Color
+		</label><br>
+		<label>
+			<input type="radio" name="device" value="Gameboy Advance">
+			Gameboy Advance
+		</label><br>
+		<label>
+			<input type="radio" name="device" value="Gameboy Advance SP">
+			Gameboy Advance SP
+		</label><br>
+	</fieldset>
+<fieldset>
+    <legend>Please enter additional comments below:</legend>
+    <label><input type="text" name="comment" class="comments-input"></label>
+</fieldset>
+		<button type="submit">Submit</button>
+	<button type="reset">Reset</button>
+				
+</form>
+<footer>
+<p>Site copyright &copy; <span>2023</span> by <span>Matt Parente</span></p>
+</footer>	
+</main>
+
+</body>
+</html>

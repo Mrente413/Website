@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-    
+    <html lang="en">
         
             <head>
         <a href="http://retro-repairs.space/" title="home"><img src="/photos/logo.png" title="home" alt="Logo" width="200"></a>
@@ -12,45 +12,141 @@
         
     <style>
 
-       .People img {
+     .People img {
         width: 100px;
        }
 
-		.staff-member img {
+     .staff-member img {
         float: right;
         margin-left: 20px;
         max-width: 200px;
         border-radius: 50%;
       }
-		   .staff-member h3 {
+	.staff-member h3 {
         font-size: 24px;
         margin-bottom: 10px;
       }
 		
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-flow: dense;
+  gap: 15px;
+  width: 100%;
+}
+  
+  .grid-item {
+    position: relative;
+  }
+  
+.grid-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+  
+.grid-item .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+  
+  .grid-item-1x1 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  
+  .grid-item-2x1 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  
+  .grid-item-1x2 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+		.grid-item-2x2 {
+			grid-column: span 1;
+			grid-row: span 1;
+		}	
 		section img {
   border-radius: 10px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-  float: left; /* or float: right; */
-  margin: 0 20px 20px 0; /* or margin: 0 0 20px 20px; */
+  
+  margin: 0 0 20px 0; /* or margin: 0 0 20px 20px; */
 }
+		
     </style>
         
-        <nav>
-            <p><a href="http://retro-repairs.space">Home</a></p>
-            <p><a href="http://retro-repairs.space/about.htm">About us</a></p>
-            <p><a href="http://retro-repairs.space/data.html">Data</a></p>
-            <p><a href="#">Repair</a></p>
-            <p><a href="#">Gallery</a></p>
-        </nav>
+        	        <nav class="grid-nav">
+  <p><a href="http://retro-repairs.space/">Home</a></p>
+  <p><a href="http://retro-repairs.space/about.htm">About us</a></p>
+  <p><a href="http://retro-repairs.space/data.html">Data</a></p>
+  <p><a href="http://retro-repairs.space/join.html">Join</a></p>
+  <p><a href="http://retro-repairs.space/shapes.html">Shapes</a></p>
+</nav>
+				
+ <section class="grid-container">
+	 
+    <div class="grid-item grid-item-1x1">
+      <img src="/photos/image1.jpg" alt="Image 1">
+      <div class="caption">GulfWar Game boy</div>
+    </div>
+  
+	 <div class="grid-item grid-item-1x1">
+      <img src="/photos/image2.jpg" alt="Image 2">
+      <div class="caption">Gameboy Colors</div>
+    </div>
+  
+	 <div class="grid-item grid-item-1x1">
+      <img src="/photos/image3.jpg" alt="Image 3">
+      <div class="caption">WorkBoy keybaord</div>
+    </div>
+  
+	<div class="grid-item grid-item-1x2">
+      <img src="/photos/image4.jpg" alt="Image 4">
+      <div class="caption">Gamecube Player</div>
+    </div>
+  
+	<div class="grid-item grid-item-2x2">
+      <img src="/photos/image5.jpg" alt="Image 5">
+      <div class="caption">Gameboy games</div>
+    </div>
+  
+	<div class="grid-item grid-item-1x2">
+      <img src="/photos/image6.jpg" alt="Image 6">
+      <div class="caption">Gameboy add</div>
+    </div>
+  
+	<div class="grid-item grid-item-2x1">
+      <img src="/photos/image7.jpg" alt="Image7">
+      <div class="caption">Gameboy add</div>
+    </div>
+  
+	<div class="grid-item grid-item-1x2">
+      <img src="/photos/image8.jpg" alt="Image 8">
+      <div class="caption">Gameboy classic</div>
+    </div>
+</section>
     </head>
-<html lang="en">
-
+	
 <body>
     <main>
     
    
 <section>
-<img src="\photos\gba.png" alt="gba" width="200" height="200" ><h2>Our History: </h2>
+
+	<h2>Our History: </h2>
 <hr>
 <p>The Game Boy was a handheld video game console developed and manufactured by Nintendo, which was released in 1989. It became one of the most 
     popular and recognizable gaming devices of the 90s and was a major factor in the popularity of handheld gaming devices. The Game Boy was a 
